@@ -30,7 +30,7 @@ public class LogExceptionsController implements Initializable {
 
     public static ExecutorService executor = Executors.newSingleThreadExecutor();
 
-    public ListView listViewLog;
+    public ListView<String> listViewLog;
     public Button buttonToggle;
     public Button buttonClearLogCat;
     public Button buttonFindExceptions;

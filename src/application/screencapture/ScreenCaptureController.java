@@ -48,9 +48,6 @@ public class ScreenCaptureController implements Initializable {
 	private volatile boolean work;
 	private int saving = 1;
 	private int saved = 2;
-	private Stage stage;
-	private Scene scene;
-
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
@@ -88,9 +85,6 @@ public class ScreenCaptureController implements Initializable {
 				stopScreenMonitoring();
 			}
 		});
-
-		this.stage = stage;
-		this.scene = scene;
 	}
 
 	private void stopScreenMonitoring() {
@@ -187,7 +181,7 @@ public class ScreenCaptureController implements Initializable {
 				"temp" + saved + ".png");
 	}
 
-	public static void showScreen(Class class1) throws IOException {
+	public static void showScreen(Class<?> class1) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(class1.getResource("/application/screencapture/ScreenCaptureLayout.fxml"));
 
 		Parent root1 = (Parent) fxmlLoader.load();

@@ -5,7 +5,6 @@ import application.AdbUtils;
 import application.DialogUtil;
 import application.FileUtils;
 import application.log.Logger;
-import application.model.CommandBatch;
 import application.preferences.Preferences;
 import com.google.gson.Gson;
 import javafx.beans.value.ChangeListener;
@@ -26,8 +25,6 @@ import java.util.ResourceBundle;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import static com.sun.activation.registries.LogSupport.log;
-
 public class IntentBroadcastsController implements Initializable {
 
     public TextField textFieldAction;
@@ -45,7 +42,7 @@ public class IntentBroadcastsController implements Initializable {
     ObservableList<String> devicesListItems = FXCollections.observableArrayList();
     ObservableList<String> savedIntentsListItems = FXCollections.observableArrayList();
     ArrayList<IntentBroadcast> intentBroadcasts = new ArrayList<>();
-    public ChoiceBox choiceBoxActions;
+    public ChoiceBox<String> choiceBoxActions;
     private ArrayList<IntentBroadcast> intents = new ArrayList<>();
 
     @Override
@@ -53,9 +50,9 @@ public class IntentBroadcastsController implements Initializable {
         fillDefaultActions();
         choiceBoxActions.setItems(devicesListItems);
 
-        choiceBoxActions.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+        choiceBoxActions.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Object>() {
             @Override
-            public void changed(ObservableValue observable, Object oldValue, Object newValue) {
+            public void changed(ObservableValue<?> observable, Object oldValue, Object newValue) {
                 if (choiceBoxActions.getSelectionModel().getSelectedItem() != null) {
                     updateDefaults(intentBroadcasts.get(choiceBoxActions.getSelectionModel().getSelectedIndex()));
                 }

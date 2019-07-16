@@ -14,10 +14,8 @@ import application.services.DeviceMonitorService;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.PrintStream;
-import java.net.URL;
 
 public class Main extends Application {
 

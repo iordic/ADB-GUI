@@ -74,10 +74,10 @@ public class PreferenceController implements Initializable{
 	}
 
 	private String getVersion() {
-		Package p = getClass().getPackage();
+		//Package p = getClass().getPackage();
 		return "0.1.9v";// p.getImplementationVersion();
 	}
-
+	
 	public void handleYapplicationsLink(ActionEvent actionEvent) {
 		Main.hostService.showDocument("https://play.google.com/store/apps/dev?id=4971752875596401073&hl=en");
 	}

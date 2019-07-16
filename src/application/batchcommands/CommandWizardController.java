@@ -53,7 +53,7 @@ public class CommandWizardController implements Initializable {
 
     }
 
-    public static void showScreen(Class class1, CommandWizardControllerListener commandWizardControllerListener) throws IOException {
+    public static void showScreen(Class<?> class1, CommandWizardControllerListener commandWizardControllerListener) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(class1.getResource("/application/batchcommands/CommandWizardLayout.fxml"));
 
         Parent root1 = (Parent) fxmlLoader.load();

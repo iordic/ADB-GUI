@@ -310,7 +310,7 @@ public class BatchCommandEditController implements Initializable {
         buttonSave.setDisable(false);
     }
 
-    public static void showScreen(Class class1, CommandBatch commandBatch, String name,
+    public static void showScreen(Class<?> class1, CommandBatch commandBatch, String name,
                                   BatchCommandEditControllerListener batchCommandEditControllerListener) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(class1.getResource("/application/batchcommands/BatchCommandEditLayout.fxml"));
 

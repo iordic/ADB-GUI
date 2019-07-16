@@ -8,11 +8,8 @@ import java.util.ResourceBundle;
 
 import application.AdbUtils;
 import application.DialogUtil;
-import application.FileUtils;
 import application.model.Model;
 import application.preferences.Preferences;
-import com.google.gson.Gson;
-
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -194,7 +191,7 @@ public class BatchCommandTabController implements Initializable {
 		int index = listBatches.getSelectionModel().getSelectedIndex();
 
 		if (index > -1) {
-			CommandBatch commandBatch = commandBatches.get(index);
+			//CommandBatch commandBatch = commandBatches.get(index);
 			new File(Preferences.getInstance().getCommandFolder(), listBatches.getSelectionModel().getSelectedItem()).delete();
 			loadBatches();
 

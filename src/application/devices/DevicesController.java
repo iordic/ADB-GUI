@@ -1,10 +1,7 @@
 package application.devices;
 
-import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Calendar;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -34,7 +31,7 @@ import javafx.scene.control.TextField;
 public class DevicesController implements Initializable {
 
     public TextField textFieldDeviceInput;
-    public ChoiceBox choiceBoxBatchCommands;
+    public ChoiceBox<String> choiceBoxBatchCommands;
     boolean killed = false;
 
     ObservableList<String> commandsListItems = FXCollections.observableArrayList();

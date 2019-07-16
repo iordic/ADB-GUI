@@ -201,7 +201,7 @@ public class ADBHelper {
 
         String[] split = result.split("\n");
 
-        Set <String> packages = new HashSet();
+        Set <String> packages = new HashSet<String>();
 
         for (int i = 1; i < split.length; i++) {
             String packageName = split[i].replace("package:", "").trim();

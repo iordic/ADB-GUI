@@ -6,7 +6,6 @@ import java.util.concurrent.*;
 
 import application.preferences.Preferences;
 import javafx.application.Platform;
-import application.log.Logger;
 import application.model.Command;
 import application.model.CommandBatch;
 import application.model.Device;
@@ -155,9 +154,7 @@ public class AdbUtils {
 
 		String result = output.toString();
 
-		if (false){
-			Logger.d("Run: " + command + "\n" + result);
-		}
+		//Logger.d("Run: " + command + "\n" + result);
 
 		return result;
 	}

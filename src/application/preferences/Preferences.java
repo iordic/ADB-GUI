@@ -2,8 +2,6 @@ package application.preferences;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-
 import application.DateUtil;
 import application.FileUtils;
 import application.log.Logger;

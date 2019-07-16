@@ -16,7 +16,7 @@ public class DeviceMonitorService {
 	public static DeviceMonitorService instance = new DeviceMonitorService();
     ExecutorService executor = Executors.newSingleThreadExecutor();
 	private boolean working;
-	private boolean justStart;
+	//private boolean justStart;
 
 	private DeviceMonitorService(){
 
@@ -31,7 +31,7 @@ public class DeviceMonitorService {
 		working = false;
 		Model.instance.clearDevices();
 
-		justStart = true;
+		//justStart = true;
 	}
 
 	public synchronized void shutDown(){
